@@ -1,0 +1,870 @@
+/*--------------------Fuentes--------------------------*/
+body{
+    background-color: #000000;
+}
+@font-face {
+    font-family: Star7;
+    src: url(fonts/STAR7.ttf);
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(fonts/Montserrat.ttf);}
+/*--------------------Paleta de Colores--------------------------*/
+#DE423A
+#878787
+#9bc6e4
+/*--------------------Estilos base--------------------------*/
+
+img{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.container{
+    width: 100%;
+    margin: auto;
+}
+
+.container--flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.colum{
+    width: 100%;
+}
+
+/*--------------------Estilos header--------------------------*/
+
+*{
+    box-sizing: border-box;
+
+}
+.main-header{
+    width: 100%;
+}
+.logo{
+    font-family: Star7;
+    padding: 10px;
+    font-size: 2.2em;
+}
+
+.logo--emphasis-first-word{
+    text-shadow: 1px 1px  #ed3b32;
+}
+.logo--emphasis-second-word{
+   color: #ed3b32;
+   text-shadow: 1px 1px  black;
+
+}
+/*Tocado*/
+.main-header__contact-info__phone{
+    color: white;
+    background-color: black;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: montserrat;
+}
+/*Tocado*/
+.main-header__contact-info__address{
+    padding: 10px;
+    margin: 0;
+    font-size: 1.2em;
+    font-family: montserrat;
+    color: #ed3b32;
+}
+.main-header [class*="icon-"]::before {
+    position: relative;
+    top: 2px;
+    right: 5px;
+}
+
+/*--------------------Estilos del menú--------------------------*/
+.main-nav{
+    width: 100%;
+    position:relative;
+    z-index: 2000;
+    padding: 10px;
+}
+
+.icon-menu{
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+.social-icon{
+    display: flex;
+    justify-content: space-between;
+}
+/*------Laura cambio en los iconos del banner----------------------------------------------------------------------------------*/
+.social-icon [class*="icon-"] {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    color: #ed3b32;
+    background: rgba(255, 255, 255, 0.351);
+    border-radius: 50%;    
+
+}
+/*------Laura cambio en el hover los iconos del banner---------------------------------------------------------------------------------*/
+
+.social-icon [class*="icon-"]:hover {
+    background-color: rgba(0, 0, 0, 0.289);
+}
+.social-icon__link{
+    text-decoration: none;
+}
+.menu{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, .85);
+    list-style: none;
+    text-align: center;
+    font-family: montserrat;
+    height: 0;
+    overflow: hidden;
+    transition: height .3s linear;
+}
+.show-menu{
+    height: 250px;
+}
+.menu__link{
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+.menu__link:hover{
+    background: #ed3b32;
+
+}
+.menu__link--select{
+    background: #ed3b32;
+}
+/*--------------------Estilos del banner--------------------------*/
+.banner{
+    margin-top: -60px;
+    position: relative;
+}
+.banner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    top: 0;
+}
+.banner__img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+.banner__content{
+    position: absolute;
+    width: 90%;
+    z-index: 1500;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    font-family: montserrat, serif;
+}
+.banner__content-text{
+    font-size: 1.5em;
+    color: #ed3b32;
+    font-weight: 600;
+}
+.banner__content-button-box{
+    font-size: .9em;
+    font-weight: 600;
+}
+
+.banner__button__link{
+    text-decoration: none;
+    color: white;
+
+}
+/* rellenar botón */
+.banner__button__link:hover{
+}
+/* Titulo de las secciones */
+.title-section{
+    font-family: Star7,serif;
+    font-size: 2em;
+    text-align: center;
+    color: #ed3b32 ;
+    align-self: center;
+    padding: 5%;
+    background-color: #000000;
+    margin: 0;
+    width: 100%;
+}
+/* Titulo de las secciones */
+/* Galería imágenes */
+.slider-frame {
+	width: 100%;
+    height: auto;
+	margin:50px auto 0;
+	overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider-frame img {
+	width: 100%;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+/*--------------------Estilos del la sección servicios--------------------------*/
+
+
+.container--flex--column{
+    display:flex;
+    flex-flow: column nowrap;
+    background-color: black;
+    justify-items: center;
+    background-image: url("img/Fotos_kaizen/Elegidas/cosasgym_BN.jpg");
+    background-size: cover;
+}
+
+.grid-container-services{
+    display: grid;
+    width: max-content;
+    height: max-content;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+    place-self: center;
+    justify-items: center;
+    margin: 25px auto;
+    
+    
+
+}
+.box{
+    margin: 0;
+}
+
+ .box--flex{
+    width: 300px;
+    height: 280px;
+    background-color: #ed3b32;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: montserrat;
+    transition: ease 0.2s; 
+    }
+    .box--flex:hover{
+    transform: scale(1.1);
+    transition: 0.2s;  
+    }
+
+.box-icon{
+    padding: 0;
+    margin: 0;
+}    
+
+.box-tittle{
+    padding: 0;
+    margin: 0;
+    font-size: 1.3em;
+    text-align: center;
+}
+.box-sub-tittle{
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+}
+
+.box-text{
+    padding: 0;
+    width: 80%;
+    text-align: justify;
+    font-size: .9em;
+}
+#tarifas-section{
+    background-image: url("img/Fotos_kaizen/Elegidas/cinta_detras_BN.jpg");
+    background-size: cover;
+}
+.tarifas-container{
+    width: max-content;
+    height: max-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 25px;
+    font-family: montserrat;
+    justify-items: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    }
+
+/*--------------------Estilos del la sección tarifas--------------------------*/
+
+.tarifas-container{
+    width: max-content;
+    height: max-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 25px;
+    font-family: montserrat;
+    justify-items: center;
+    background-color: black;
+    padding-bottom: 50px;
+    }
+
+/*--------------------Estilos del la sección horarios y clases--------------------------*/
+.container-schedule{
+    display: grid;
+    place-items: center;
+    background-image: url('img/Fotos_kaizen/Elegidas/generalgym_BN.jpg');
+    padding: 3% 0;
+}
+
+.box-schedule{
+    background-color: #ed3b32;
+    width: 280px;
+    height: max-content;
+    font-family: montserrat;
+    display: flex;
+    flex-flow: column nowrap;
+    place-content: center;
+    background-image: url();
+    padding: 50px;
+    text-align: center;
+}
+
+.box-schedule img{
+    width: 80px;
+    margin: 0 auto;
+}
+.box-schedule h3{
+    margin: 0 auto;
+}
+.box-schedule h4{
+    margin: 0 auto;
+    padding: 10px;
+}
+.box-schedule p{
+    margin: 0 auto;
+}
+.box-schedule:hover{
+    transform: scale(1.1);
+    transition: 0.2s;  
+    }
+/* footer Jose */
+#pie-pagina{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: montserrat;
+    background-color: #000000;
+}
+.box-footer-title{
+    font-size: 1em;
+}
+#pie-pagina #grupo1{
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 50px;
+    padding: 32px 0 0 0;
+    place-items: center center;
+}
+#pie-pagina #grupo1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+#pie-pagina #grupo1 .box figure img{
+    width: 280px;
+}
+#pie-pagina #grupo1 .box h2{
+    color: whitesmoke;
+    margin-bottom: 25px;
+    font-size: 1.3em;
+    color: #DE423A;
+    text-align: center;
+    
+}
+
+.map{
+    place-self: center center;
+}
+#pie-pagina #grupo1 .box a{
+    color: white;
+    margin-bottom: 10px;
+    font-size: .8em;
+    text-align: center;
+    font-weight: 600;
+}
+#pie-pagina #grupo1 .box a{
+    color: white;
+    margin-bottom: 10px;
+    text-decoration: none;
+    
+}
+#pie-pagina #grupo1 .box ul{
+    color: white;
+    margin-bottom: 10px;
+    list-style: none;
+}
+#pie-pagina #grupo1 .box li{
+    display: flex;
+    flex-flow: row nowrap;
+}
+#pie-pagina #grupo1 .box a:hover{
+ color: #DE423A;}
+#pie-pagina #grupo1 .red-social{
+    display: flex;
+    flex-direction: row;
+}
+#pie-pagina #grupo1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    color: white;
+    margin-right: 10px;
+    text-align: center;
+    transition: all 300ms ease;
+    font-size: 1.2em;
+}
+#pie-pagina #grupo1 .red-social a:hover{
+    color: #ed3b32;
+}
+#pie-pagina #grupo2{
+    background-color: #000000;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+#pie-pagina #grupo2 small{
+    font-size: 10px;
+}
+.list-container{
+    display: flex;
+    flex-flow: column;
+    margin: 0;    
+    padding: 0;
+
+}
+.list-container ul{
+    margin: 0;
+    padding: 0;
+}
+
+.list-container li a{
+    display: flex;
+    place-items: center center;
+    margin: 0;
+}
+
+.icon-mail{
+    padding: 5px;
+    font-size: 1.5em;
+}
+.icon-mobile{
+    font-size: 2em;
+}
+/* footer Jose */
+/* Boton wa Jose */
+#botonwa{
+    background-color: #00e676;
+    border: 1px solid white;
+    position: fixed;
+    z-index: 999;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 25px;
+    padding: 12px;
+    transition: ease 0.3s;
+}
+#botonwa:hover{
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+.iconowa{
+    width: 25px;
+    transition: ease 1s;
+}
+/* Boton wa Jose */
+/* Quienes somos Jose */
+#quienes-section{
+    font-family: montserrat;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background-color: #000000;
+    
+}
+#quienes-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background-image: url("img/Fotos_kaizen/Elegidas/mancuernas_BN.jpg");
+    background-size: cover;
+}
+#texto-quienes{
+    color: white;
+    padding: 3%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.text-information{
+    text-align: justify;
+    font-size: .8em;
+}
+.emphasis-word{
+    color: #ed3b32;
+    text-shadow: 1px 1px  black;
+}
+#texto-quienes h1{
+    font-style: italic;
+    text-align: center;
+    font-size: 1em;
+}
+#texto-quienes h2{
+    font-size: 0.9em;
+}
+#logo-quienes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 32px;
+    padding-top: 12px;
+}
+video{
+    width: 350px;
+    max-width: 1200px;
+    place-self: center;
+}
+#quienes-section button{
+    margin-top: 2%;
+    background-color: #DE423A;
+    width: 150px;
+    padding: 15px;
+    appearance: none;
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    place-self: center;
+    }
+/* Quienes somos Jose */
+/* opiniones Jose */
+#opiniones-container{
+    font-family: montserrat;
+    height:80%;
+    background-image: url("img/Fotos_kaizen/Elegidas/La_C_imagen_BN.jpg");
+    background-size: cover;
+    
+}
+/* opiniones Jose */
+/* Tarifas Jose */
+
+
+/* Tarifas Jose */
+/*--------------------Estilos responsive--------------------------*/
+
+@media screen and (min-width:480px){
+    .main-header__contact-info{
+        text-align: right;
+    }
+    .main-header__contact-info__phone{
+        background: none;
+        color:#ed3b32;
+    }
+    .main-header__contact-info__address{
+        background: none;
+        color:white;
+    }    
+    .banner{
+        margin-top: -200px;
+        z-index: -1000;
+    }
+    .banner__content{
+        font-size: 1.4em;
+    }
+    .banner__content-text{
+        margin: 0;
+    }
+    .colum--50{
+        width: 50%;
+    }
+    .main-nav{
+        background: rgba(0, 0, 0, .85);
+    }
+    .grid-container-services{
+        display: grid;
+        width: max-content;
+        height: max-content;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 1% 0;   
+    }
+
+    .tarifas-container{
+        width: max-content;
+        height: max-content;        
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 25px;
+        font-family: montserrat;
+        padding-bottom: 40px;
+        justify-self: center;
+        place-items: center center;
+        background: none;
+    }
+    .section-tittle{
+        font-size: 2em;
+    }
+    .box-tittle{
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .text-information{
+        font-size: .9em;
+    }
+    #texto-quienes h1{
+        font-size: 1.2em;
+        min-width: 250px;
+    }
+    .title-section{
+        font-size: 2.4em;
+    }
+    #pie-pagina #grupo1{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        padding: 10px 0px;
+        place-items: center center;
+    }
+    #pie-pagina #grupo1 .box h2{
+        font-size: 1.5em;
+    }
+    #pie-pagina #grupo1 .box a{
+        font-size: 1em;
+    }
+    #pie-pagina #grupo2 small{
+        font-size: 12px;
+    }
+    .social-icon__link [class*=icon-]{
+        font-size: 1.4em;
+    }
+    .iconowa{
+        width: 35px;
+    }
+    .box-schedule{
+        width: 400px;
+    }
+    #quienes-container{
+        flex-flow: row;
+    }   
+    #logo-quienes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 32px;
+        padding-top: 12px;
+    }
+    video{
+        width: 550px;
+        max-width: 1200px;
+        place-self: center;
+        padding-right: 32px;
+    }
+    #quienes-section button{
+        margin-top: 2%;
+        background-color: #DE423A;
+        width: 150px;
+        padding: 15px;
+        appearance: none;
+        border: none;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        place-self: center;
+        }
+}
+
+@media screen and (min-width:1024px){
+    .logo{
+        font-size: 2.5em;
+        padding: 0;
+        margin-left: 3%;
+    }
+    .main-header__contact-info__address, .main-header__contact-info__phone {
+        padding-right: 0;
+        margin-right: 2%;
+    }
+    .main-nav{
+        padding: 0;
+    }
+    .icon-menu{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        height: auto;
+        width: auto;
+        position: static;
+    }
+    .social-icon{
+        padding: 0;
+        margin-right: 1%;
+    }
+    .grid-container-services{
+        display: grid;
+        width: max-content;
+        height: max-content;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;   
+        
+    }
+    .tarifas-container{
+        width: max-content;
+        height: max-content;   
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: repeat(4, 1fr);
+        font-family: montserrat;
+        padding-bottom: 40px;
+        grid-gap: 25px;
+        
+}
+#texto-quienes h1{
+    font-size: 1.5em;
+}    
+
+#texto-quienes h2{
+        font-size: 1.2em;
+    }
+    #logo-quienes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 12px;
+    }
+    video{
+        width: 800px;
+        max-width: 1200px;
+        place-self: center;
+        padding-right: 32px;
+        padding-top: 32px;
+    }
+    #quienes-section button{
+        margin-top: 2%;
+        background-color: #DE423A;
+        width: 150px;
+        padding: 15px;
+        appearance: none;
+        border: none;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        place-self: center;
+        }
+    .section-tittle{
+        font-size: 2.5em;
+    }
+    .box-tittle{
+        font-size: 1.4em;
+    }
+    .box-text{
+        font-size: 1em;
+    }
+    .text-information{
+        font-size: 1em;
+    }
+    .title-section{
+        font-size: 2.6em;
+
+    }
+    #pie-pagina #grupo1{
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 50px;
+        padding: 45px 0px;
+        justify-content: space-between;
+        align-items: start;
+        margin: auto;
+    }
+    #pie-pagina #grupo1 .box h2{
+        margin-bottom: 25px;
+        font-size: 1em;
+        padding: 15px;
+    }
+    #pie-pagina #grupo1 .box a{
+        margin-bottom: 10px;
+        font-size: .9em;
+    }
+    #pie-pagina #grupo2 small{
+        font-size: 15px;
+    }
+    #pie-pagina #grupo1 .box h2{
+        font-size: 1.5em;
+    }
+    .social-icon__link [class*=icon-]{
+        font-size: 1.4em;
+    }
+    .iconowa{
+        width: 40px;
+    }
+    .container-schedule{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .box-schedule{
+        height: 300px;
+    }
+}   
+
+
